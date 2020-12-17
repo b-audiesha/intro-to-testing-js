@@ -14,6 +14,18 @@ function sayHello(name) {
         return "Hello, World!";
     }
 }
+
 function isFive(x) {
     return x == 5;
+}
+
+function isEven(x) {
+    if (
+        typeof x === 'number'
+        || typeof x === 'string'
+    ) {
+        return Number(x) % 2 === 0;
+    } else {
+        return false;
+    }
 }

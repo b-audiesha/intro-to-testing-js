@@ -1,21 +1,21 @@
 // Unit tests for the helloWorld function
-describe('helloWorld', function() {
-    it('should be a defined function', function() {
-      expect(typeof helloWorld).toBe('function');
+describe('helloWorld', function () {
+    it('should be a defined function', function () {
+        expect(typeof helloWorld).toBe('function');
     });
-    it('should return a string when called', function() {
-      expect(typeof helloWorld()).toBe("string");
+    it('should return a string when called', function () {
+        expect(typeof helloWorld()).toBe("string");
     });
-    it('should return the string "Hello, World!" when executed', function() {
-      expect(helloWorld()).toBe("Hello, World!");
+    it('should return the string "Hello, World!" when executed', function () {
+        expect(helloWorld()).toBe("Hello, World!");
     });
-    it("should never return 'undefined' when called", function() {
-      expect(helloWorld()).not.toBe(undefined);
+    it("should never return 'undefined' when called", function () {
+        expect(helloWorld()).not.toBe(undefined);
     });
 
 });
 
-describe('sayHello', function() {
+describe('sayHello', function () {
     it('should be a defined function', function () {
         expect(typeof sayHello).toBe('function');
     });
@@ -32,9 +32,9 @@ describe('sayHello', function() {
         expect(sayHello("5")).toBe("Hello, World!");
         expect(sayHello([])).toBe("Hello, World!");
     });
-})
+});
 
-describe('isFive', function() {
+describe('isFive', function () {
     it('should be a defined function', function () {
         expect(typeof isFive).toBe('function');
     });
@@ -46,3 +46,24 @@ describe('isFive', function() {
         expect(isFive("5")).toBe(true);
     });
 })
+
+    describe('isEven', function() {
+        it('should be a defined function', function () {
+            expect(typeof isEven).toBe('function');
+        });
+        it('should return a boolean', function () {
+            expect(typeof isEven()).toBe('boolean');
+        });
+        it('should return a true if x is NOT even', function () {
+            expect(isEven(2)).toBe(true);
+            expect(isEven(-4)).toBe(true);
+        });
+        it('should return a false if x is even', function () {
+            expect(isEven(3)).toBe(false);
+            expect(isEven("banana")).toBe(false);
+            expect(isEven(Infinity)).toBe(false);
+            expect(isEven(true)).toBe(false);
+            expect(isEven(false)).toBe(false);
+        })
+    })
+
