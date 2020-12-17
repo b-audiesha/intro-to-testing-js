@@ -66,4 +66,24 @@ describe('isFive', function () {
             expect(isEven(false)).toBe(false);
         })
     })
+describe('isVowel', function() {
+    it('should be a defined function', function () {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return a boolean', function () {
+        expect(typeof isVowel()).toBe('boolean');
+    });
+    it('should return a true if x is a vowel', function () {
+        expect(isVowel("a")).toBe(true);
+        expect(isVowel("A")).toBe(true);
+        expect(isVowel("y")).toBe(false);
+        expect(isVowel("4")).toBe(false);
+    });
+    it('should return a false if x is NOT a vowel', function () {
+        expect(isVowel("y")).toBe(false);
+        expect(isVowel("4")).toBe(false);
+    });
+
+})
+
 

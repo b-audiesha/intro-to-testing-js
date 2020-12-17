@@ -29,3 +29,7 @@ function isEven(x) {
         return false;
     }
 }
+function isVowel(x) {
+    let vowels = "aeiouAEIOU";
+    return vowels.indexOf(x) !== -1;
+}
